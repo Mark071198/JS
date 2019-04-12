@@ -8,3 +8,8 @@ body #wrapper {
 body #wrapper h1 {
   color: #fff;
 }
+body #wrapper #timer_div {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
