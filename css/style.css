@@ -1,0 +1,10 @@
+body {
+  background: #333;
+}
+body #wrapper {
+  margin: 0 auto;
+  text-align: center;
+}
+body #wrapper h1 {
+  color: #fff;
+}
