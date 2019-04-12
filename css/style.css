@@ -13,3 +13,8 @@ body #wrapper #timer_div {
   font-size: 30px;
   margin-bottom: 30px;
 }
+body #wrapper #score {
+  color: pink;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
