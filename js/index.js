@@ -17,4 +17,21 @@ var Game = function(options) {
         newBubble.blow();
       }, Math.floor(Math.random() * this.duration - 800) + 0);
     };
+     //Set countdown timer from 16 seconds 
+    var seconds_left = this.duration / 1000;
+    var interval = setInterval(function() {
+      $('#timer_div').html(--seconds_left);
+
+      if (seconds_left <= 0) {
+        $('#timer_div').html("Time is over"); 
+        $('#create').html("Play again?");
+        $('#create').show();
+         clearInterval(interval);
+      }
+    }, 1000);
+  };
+
+ 
+  
+};
   
