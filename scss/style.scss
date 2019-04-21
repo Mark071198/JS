@@ -16,7 +16,11 @@ body {
       font-size: 30px;
       margin-bottom:10px;
     }
+<<<<<<< HEAD
     #container {
+=======
+     #container {
+>>>>>>> lb3.2
       background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);
       font-family: calibri, serif;
       color: #d9d9d9;
@@ -29,7 +33,11 @@ body {
       overflow: hidden;
       position: relative;
       #create {
+<<<<<<< HEAD
       -moz-box-shadow: inset 0px -3px 7px 0px #29bbff;
+=======
+        -moz-box-shadow: inset 0px -3px 7px 0px #29bbff;
+>>>>>>> lb3.2
         -webkit-box-shadow: inset 0px -3px 7px 0px #29bbff;
         box-shadow: inset 0px -3px 7px 0px #29bbff;
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dabf9), color-stop(1, #0688fa));
@@ -53,7 +61,11 @@ body {
         text-decoration: none;
         text-shadow: 0px 1px 0px #263666;
       }
+<<<<<<< HEAD
        #create:hover {
+=======
+      #create:hover {
+>>>>>>> lb3.2
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
         background: -moz-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
         background: -webkit-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
@@ -62,7 +74,11 @@ body {
         background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
         background-color: #0688fa;
       }
+<<<<<<< HEAD
     }
+=======
+      }
+>>>>>>> lb3.2
     .bubble {
       width: 40px;
       height: 40px;
