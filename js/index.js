@@ -34,4 +34,12 @@ var Game = function(options) {
  
   
 };
+
+//click to start the game and create new bubbles
+$('#create').click(function() {
+  game.score=0;
+   $('#score').html('Score : ' + game.score);
+  game.start();
+  $('#create').hide();
+})
   
