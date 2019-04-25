@@ -80,7 +80,8 @@ function Bubble(left, top) {
   this.pop = function() {
     $('#bubble-' + this.id).hide();
     game.score++;
-   wwww
+    $('#score').html('Score : ' + game.score);
+
   }
 
 }
