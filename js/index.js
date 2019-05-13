@@ -35,6 +35,8 @@
  
   
 };
+
+
 //click to start the game and create new bubbles
 $('#create').click(function() {
   game.score=0;
@@ -85,3 +87,6 @@ function Bubble(left, top) {
   }
 
 }
+
+
+wwww
