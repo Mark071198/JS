@@ -1,4 +1,5 @@
 var Game = function(options) {
+<<<<<<< HEAD
   this.bubbles = options.bubbles;
   this.bubblesArr = [];
   this.score = 0;
@@ -30,6 +31,7 @@ var Game = function(options) {
       }
     }, 1000);
   };var Game = function(options) {
+
   this.bubbles = options.bubbles;
   this.bubblesArr = [];
   this.score = 0;
@@ -117,8 +119,8 @@ function Bubble(left, top) {
 }
 
 
-
 var game = new Game({
   bubbles: 20,
   duration: 16000
 });
+
