@@ -1,5 +1,4 @@
-
-  var Game = function(options) {
+var Game = function(options) {
   this.bubbles = options.bubbles;
   this.bubblesArr = [];
   this.score = 0;
@@ -35,7 +34,6 @@
  
   
 };
-
 
 //click to start the game and create new bubbles
 $('#create').click(function() {
@@ -88,4 +86,5 @@ function Bubble(left, top) {
 }
 
 
-wwww
+
+www
