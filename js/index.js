@@ -86,7 +86,6 @@ function Bubble(left, top) {
 }
 
 
-
 var game = new Game({
   bubbles: 20,
   duration: 16000
