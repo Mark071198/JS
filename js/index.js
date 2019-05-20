@@ -3,7 +3,7 @@ var Game = function(options) {
   this.bubblesArr = [];
   this.score = 0;
   this.duration = options.duration;
-  
+
   this.start = function() {
     
     setTimeout(function() {
@@ -30,3 +30,24 @@ var Game = function(options) {
       }
     }, 1000);
   };
+
+  };
+
+//click to start the game and create new bubbles
+$('#create').click(function() {
+  game.score=0;
+   $('#score').html('Score : ' + game.score);
+  game.start();
+  $('#create').hide();
+})
+
+// Defines what a bubble is
+function Bubble(left, top) {
+  this.id = game.bubblesArr.length;
+
+  //Animate this bubble
+  this.animate = function() {
+    $("#bubble-" + this.id).animate({
+      top: -100,
+    }, Math.floor(Math.random() * 2100) + 2000)
+  }
