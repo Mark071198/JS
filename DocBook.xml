@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<article>
+	<info>
+		<title>Документация к проекту Bubbles</title>
+		<author>
+			<personname>
+				<firstname>Марк</firstname>
+				<surname>Старушко</surname>
+			</personname>
+		</author>
+		<copyright>
+			<year>2019</year>
+			<holder>Старушко Марк</holder>
+			<city>Донецк</city>
+		</copyright>
+	</info>
+	<chapter>
+		<title>Описание программного продукта</title>
+		<para>Программа для лопания пузырей.</para>
+		</para>
+		<section>
+            <title>Особенности програмнного продукта</title>
+            <para>Управление происходит за счет наведение курсора мыши на объекты и лопание их нажатием левого клика</para>
+            <para>Есть возможность начать игру снова после истечения данного времени</para>
+        </section>
+	</chapter>
+	<chapter>
+        <title>Детали реализации</title>
+        <para>Особенности реализации отдельного функционала представлены ниже:</para>
+        <section>
+            <title>Рандомизация размеров и позиции</title>
+            <para>Код задает размеры пузырей и устанавливает из изначальное расположение</para>
+            <example>
+                <code><![CDATA[
+                 var pageWidth = $(document).width();
+			     $('#bubble-' + this.id).css("left", Math.floor(Math.random() * pageWidth / 100 * 35) + 20);
+			     var size = Math.floor(Math.random() * 60) + 50 + "px";
+			     $('#bubble-' + this.id).css("width", size);
+			     $('#bubble-' + this.id).css("height", size);
+                 ]]></code>
+            </example>
+        </section>
+        <section>
+            <title>Обратный отсчет</title>
+            <para>Показывает обратный отсчет во время игры</para>
+            <example>
+                <code><![CDATA[
+                var seconds_left = this.duration / 1000;
+        		var interval = setInterval(function() {
+            	    $('#timer_div').html(--seconds_left);
+
+                    if (seconds_left <= 0) {
+                        $('#timer_div').html("Time is over"); 
+                        $('#create').html("Play again?");
+                        $('#create').show();
+                        clearInterval(interval);
+                    }
+                }, 1000);
+                ]]></code>
+            </example>
+        </section>
+        <section>
+            <title>Время между генерацией пузырей</title>
+            <para>Ожидает случайного количества времени между генерацией пузырей</para>
+            <example>
+                <code><![CDATA[
+                for (i = 0; i < this.bubbles; i++) {
+                    setTimeout(function() {
+                        var newBubble = new Bubble();
+                        newBubble.blow();
+                    }, Math.floor(Math.random() * this.duration - 800) + 0);
+        		};
+                ]]></code>
+            </example>
+        </section>
+    </chapter>
+</article>
