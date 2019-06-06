@@ -16,8 +16,8 @@
 	</info>
 	<chapter>
 		<title>Описание программного продукта</title>
-		<para>Программа для лопания пузырей.</para>
-		</para>
+		<para>Браузерная программа для лопания пузырей</para>
+		<para>Игра доступна онлайн: https://github.com/Mark071198/JS</para>
 		<section>
             <title>Особенности програмнного продукта</title>
             <para>Управление происходит за счет наведение курсора мыши на объекты и лопание их нажатием левого клика</para>
@@ -31,20 +31,20 @@
             <title>Рандомизация размеров и позиции</title>
             <para>Код задает размеры пузырей и устанавливает из изначальное расположение</para>
             <example>
-                <code><![CDATA[
+                 <programlisting><![CDATA[
                  var pageWidth = $(document).width();
 			     $('#bubble-' + this.id).css("left", Math.floor(Math.random() * pageWidth / 100 * 35) + 20);
 			     var size = Math.floor(Math.random() * 60) + 50 + "px";
 			     $('#bubble-' + this.id).css("width", size);
 			     $('#bubble-' + this.id).css("height", size);
-                 ]]></code>
+                 ]]></programlisting>
             </example>
         </section>
         <section>
             <title>Обратный отсчет</title>
             <para>Показывает обратный отсчет во время игры</para>
             <example>
-                <code><![CDATA[
+                <programlisting><![CDATA[
                 var seconds_left = this.duration / 1000;
         		var interval = setInterval(function() {
             	    $('#timer_div').html(--seconds_left);
@@ -56,21 +56,21 @@
                         clearInterval(interval);
                     }
                 }, 1000);
-                ]]></code>
+                ]]></programlisting>
             </example>
         </section>
         <section>
             <title>Время между генерацией пузырей</title>
             <para>Ожидает случайного количества времени между генерацией пузырей</para>
             <example>
-                <code><![CDATA[
+                <programlisting><![CDATA[
                 for (i = 0; i < this.bubbles; i++) {
                     setTimeout(function() {
                         var newBubble = new Bubble();
                         newBubble.blow();
                     }, Math.floor(Math.random() * this.duration - 800) + 0);
         		};
-                ]]></code>
+                ]]></programlisting>
             </example>
         </section>
     </chapter>
